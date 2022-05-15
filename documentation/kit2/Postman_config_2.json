@@ -1,0 +1,18 @@
+{
+  "id": "3a309efa-6b3b-413e-9497-7297bbcc7c55",
+  "name": "Prod",
+  "values": [
+    {
+      "key": "Roboats-Token",
+      "value": "",
+      "enabled": true,
+      "type": "any"
+    },
+    {
+      "key": "roboats_url",
+      "value": "roboats.virtualregatta.com",
+      "enabled": true,
+      "type": "default"
+    }
+  ]
+}

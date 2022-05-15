@@ -1,0 +1,177 @@
+{
+  "info": {
+    "_postman_id": "1cec0f58-fd9c-45b8-b9b2-a3746d7fe087",
+    "name": "AWS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+          "name": "Roboats",
+          "item": [
+            {
+              "name": "Infos Slow",
+              "id": "691059f3-a618-4912-b2d7-596990d20181",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Token",
+                    "value": "{{Roboats-Token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{roboats_url}}/api/infos/slow",
+                  "protocol": "https",
+                  "host": [
+                    "{{roboats_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "infos",
+                    "slow"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Login",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ee11c04d-ba81-4ca9-9ac2-f3ce8da4b7e9",
+                    "exec": [
+                      "postman.setEnvironmentVariable(\"Roboats-Token\", postman.getResponseHeader(\"Token\"));",
+                      "console.log(postman.getEnvironmentVariable(\"Roboats-Token\"));"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "id": "18679d90-af41-4d45-8650-8661fd10ad20",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"your@email.com\",\n    \"password\": \"yourpassword\",\n    \"raceId\": 123456,\n    \"legNum\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{roboats_url}}/api/login",
+                  "protocol": "https",
+                  "host": [
+                    "{{roboats_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Infos Fast",
+              "id": "f3541fdd-c23e-4376-9c42-13d655668be0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Token",
+                    "value": "{{Roboats-Token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{roboats_url}}/api/infos/fast",
+                  "protocol": "https",
+                  "host": [
+                    "{{roboats_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "infos",
+                    "fast"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Boat Actions",
+              "id": "c107982c-d7de-4875-8bef-47469c418196",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Token",
+                    "value": "{{Roboats-Token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"tsLegStart\": 1640010600000,\n    \"actions\" : [\n        {\n            \"type\": \"heading\",\n            \"values\" : {\n                \"deg\": 20,\n                \"autoTwa\": false\n            }\n            \n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{roboats_url}}/api/boat/actions",
+                  "protocol": "https",
+                  "host": [
+                    "{{roboats_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "boat",
+                    "actions"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "id": "7896816a-0fe3-45ba-823b-06b6c2490aae"
+        }
+  ]
+}
