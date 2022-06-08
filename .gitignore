@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#WonderDuck stuffs
+app/1_-4_44.deg
+app/wind.wnd
